@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3"
+    tools:context=".MainActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#ffffff">
+
+                <ImageView
+                    android:id="@+id/iv_message"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/icon_message" />
+
+                <TextView
+                    android:id="@+id/tv_message_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:layout_alignTop="@+id/iv_message"
+                    android:layout_alignRight="@+id/iv_message"
+                    android:layout_marginRight="-6dp"
+                    android:background="@drawable/bg_message_num"
+                    android:gravity="center"
+                    android:minWidth="12dp"
+                    android:text="9"
+                    android:textColor="#ffffff"
+                    android:textSize="9sp" />
+
+                <ImageView
+                    android:id="@+id/iv_setting"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/iv_message"
+                    android:src="@mipmap/icon_message" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_user_photo"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/ic_launcher_round" />
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/iv_user_photo"
+                    android:text="手机用户0226"
+                    android:textColor="#404040"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_auth_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_user_name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/iv_user_photo"
+                    android:text="去认证"
+                    android:textColor="#404040"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <include layout="@layout/layout_menu_order" />
+
+            <include layout="@layout/layout_menu_household_management" />
+
+            <include layout="@layout/layout_menu_mall_management" />
+
+            <include layout="@layout/layout_menu_other_tools" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
